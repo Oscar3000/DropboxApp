@@ -1,4 +1,4 @@
-Project Assessment:
+PROJECT ASSESSMENT:
       Dropbox App is an application to showcase the use of the Dropbox api to fetch files and folders, delete them and display previews of files. The Application requests permission to view your dropbox files and folders after which if request is granted, display them for you to see.
 
 PACKAGES:
