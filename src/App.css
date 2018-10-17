@@ -1,0 +1,48 @@
+body{
+  background: #f8f8f8;
+}
+
+.list-group a{
+  color: black;
+}
+.list-group .list-group-item:hover .d-flex a{
+  color:blue;
+  text-decoration: none;
+}
+
+.list-group .list-group-item:hover{
+  background-color: rgb(237, 238, 238);
+  cursor: pointer;
+}
+
+.icon-btn {
+  width: calc(2.25276rem + 2px) !important;
+  padding: 0;
+  line-height: 2.25276rem;
+}
+
+.fixed-message-box {
+  position: fixed;
+  right: 0;
+  bottom: 71px;
+  left: 28px;
+  z-index: 1030;
+  box-shadow: 4px 5px 10px #444;
+}
+
+.message-box-width {
+  width: 40%;
+}
+
+
+@media (max-width:768px){
+  .message-box-width {
+    width: 100% !important;
+}
+
+.fixed-message-box {
+    left: 0 !important;
+    bottom: 0 !important;
+    box-shadow: none;
+}
+}
