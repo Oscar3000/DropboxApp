@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {ListGroupItem} from 'reactstrap';
 import DropDown from './DropDown/DropDown';
 import { connect } from 'react-redux';
@@ -78,5 +79,10 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+
+File.propTypes ={
+  getFilePreview:PropTypes.func,
+  token:PropTypes.string
+}
 
 export default connect(mapStateToProps,mapDispatchToProps)(File);

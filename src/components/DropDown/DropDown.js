@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import * as actions from '../../store/actions/index';
 import Aux from '../../hoc/Auxilliary/Auxilliary';
@@ -47,6 +48,11 @@ const mapDispatchToProps = dispatch => {
   return {
   deleteItem:(id)=> dispatch(actions.deleteFileOrFolder(id))
   };
+}
+
+DropDown.propTypes ={
+  deleteItem:PropTypes.func,
+  dropdownOpen:PropTypes.bool
 }
 
 

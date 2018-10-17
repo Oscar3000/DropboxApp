@@ -3,6 +3,7 @@ import {Navbar, NavbarToggler, NavbarBrand, Nav,NavItem,Collapse, Button, Uncont
 import { connect } from 'react-redux';
 import Aux from '../hoc/Auxilliary/Auxilliary';
 import * as actions from '../store/actions/index';
+import PropTypes from 'prop-types';
 
 class Navbuilder extends Component {
   state ={
@@ -95,5 +96,9 @@ const mapDispatchToProps =  dispatch => {
   };
 };
 
+Navbuilder.propTypes ={
+  deleteItem:PropTypes.func,
+  isOpen:PropTypes.bool
+}
 
 export default connect(null, mapDispatchToProps)(Navbuilder);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {withRouter, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import './App.css';
@@ -56,5 +57,13 @@ const mapDispatchToProps = dispatch =>{
     setPath:(path) => dispatch(actions.setPath(path))
   };
 };
+
+App.propTypes = {
+  isAuthenticated:PropTypes.bool,
+  loading:PropTypes.bool,
+  checkAuthState:PropTypes.func,
+  auth:PropTypes.func,
+  setPath:PropTypes.func
+}
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App));
