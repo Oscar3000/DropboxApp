@@ -17,6 +17,12 @@ class File extends Component {
     return new Date(unformattedDate).toLocaleString();
   }
 
+  getSize(unformattedSize){
+    let size = unformattedSize / 125000;
+    size = size.toPrecision(3);
+    return `${size} MB`;
+  }
+
   getPath(){
     let link = this.props.file.path_lower.replace('/' + this.props.file.name.toLowerCase(),"");
     link = link + '?preview=' + this.props.file.name;
@@ -55,7 +61,7 @@ class File extends Component {
             </div>
           </div>
           <div className="col-md-3 d-none d-md-block" onClick={() => this.goToPath()}>
-            <p className="text-truncate">{this.props.file.size}</p>
+            <p className="text-truncate">{this.getSize(this.props.file.size)}</p>
           </div>
           <div className="col-md-3 d-none d-md-block" onClick={() => this.goToPath()}>
             <p className="text-truncate mr-2">{this.getDate(this.props.file.client_modified)}</p>
